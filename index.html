@@ -1,0 +1,71 @@
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Room</title>
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+            body {
+                background-color: rgb(47, 47, 47);
+                width: 100vw;
+                height: 100vh;
+                display: grid;
+                place-content: center;
+            }
+            div{
+                background-color: green;
+                width: 350px;
+                text-align: center;
+                border-radius: 20px;
+            }
+            img{
+                width: 100%;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+            button {
+                width: 80%;
+                height: 40px;
+                font-size: 20px;
+                margin: 5px;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <img src="cboff.png" alt="" id="bulb">
+            <button onclick="change()" id="btn">Turn On</button>
+        </div>
+
+
+        <script>
+            let bulb = document.getElementById('bulb');
+            let btn = document.getElementById('btn');
+            const audio = new Audio('click.mp3');
+            let light = false;
+
+            function change () {
+                audio.play();
+
+                if(light==false) {
+                    bulb.setAttribute("src", "cbon.png");
+                    light = true;
+                    btn.innerHTML = "Turn Off";
+                }
+                else {
+                    bulb.setAttribute("src", "cboff.png");
+                    light = false;
+                    btn.innerHTML = "Turn On";
+                }
+
+            }
+        </script>
+    </body>
+
+</html>
