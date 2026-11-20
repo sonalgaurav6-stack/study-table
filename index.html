@@ -39,7 +39,7 @@
 
     <body>
         <div>
-            <img src="photo.png" alt="sonal ka photo" id="bulb">
+            <img src="sonal-photo.jpg" alt="sonal ka photo" id="bulb">
             <button onclick="change()" id="btn">Turn On</button>
         </div>
 
@@ -47,14 +47,14 @@
         <script>
             let bulb = document.getElementById('bulb');
             let btn = document.getElementById('btn');
-            const audio = new Audio('click.mp3');
+            const audio = new Audio('click (2).mp3');
             let light = false;
 
             function change () {
                 audio.play();
 
                 if(light==false) {
-                    bulb.setAttribute("src", "cbon.png");
+                    bulb.setAttribute("src", "cboff.png");
                     light = true;
                     btn.innerHTML = "Turn Off";
                 }
