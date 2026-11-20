@@ -47,21 +47,19 @@
         <script>
             let bulb = document.getElementById('bulb');
             let btn = document.getElementById('btn');
-            const audio = new Audio('click (2).mp3');
             let light = false;
 
-            function change () {
-                audio.play();
-
+            function change(){
                 if(light==false) {
-                    bulb.setAttribute("src", "cboff.png");
-                    light = true;
-                    btn.innerHTML = "Turn Off";
+                    bulb.style.display = "block";
+                   btn.innerHTML = "Turn Off";
+                   light = true;
+                    
                 }
                 else {
-                    bulb.setAttribute("src", "cboff.png");
-                    light = false;
-                    btn.innerHTML = "Turn On";
+                  bulb.style.display = "none";
+                  btn.innerHTML = "Turn On";
+                  light = false;  
                 }
 
             }
